@@ -1,0 +1,388 @@
+/* =========================
+   COULEURS
+========================= */
+
+:root {
+    --rouge: #800020;
+    --rose: #f8e9e3;
+    --rose-fonce: #f1d8cf;
+    --blanc: white;
+
+    --titre: "Lora", Georgia, serif;
+    --texte: "Source Sans 3", Arial, sans-serif;
+}
+
+
+/* =========================
+   BASE
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: var(--texte);
+
+    color: var(--rouge);
+
+    background-color: var(--rose);
+
+    /* bandes verticales */
+    background-image: repeating-linear-gradient(
+        90deg,
+        #f8e9e3 0px,
+        #f8e9e3 20px,
+        #f1d8cf 20px,
+        #f1d8cf 40px
+    );
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--rouge);
+}
+
+
+/* =========================
+   CONTENEUR
+========================= */
+
+.conteneur {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.entete {
+    background-color: white;
+}
+
+.entete-contenu {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+/* LOGO */
+
+.logo img {
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+}
+
+.menu a {
+    padding: 6px 9px;
+
+    font-size: 11px;
+
+    text-decoration: none;
+
+    color: var(--rouge);
+
+    border-radius: 15px;
+}
+
+.menu a.actif {
+    background-color: var(--rouge);
+
+    color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    padding: 30px 0 15px;
+}
+
+.hero-contenu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.hero-texte {
+    width: 40%;
+}
+
+.surtitre {
+    margin-bottom: 10px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 0 0 20px;
+
+    font-family: var(--titre);
+
+    font-size: 30px;
+
+    line-height: 1.05;
+
+    color: var(--rouge);
+}
+
+
+/* IMAGE HERO */
+
+.hero-image {
+    width: 60%;
+}
+
+.hero-image img {
+    width: 100%;
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+.boutons {
+    display: flex;
+
+    gap: 8px;
+}
+
+.bouton {
+    padding: 7px 10px;
+
+    border-radius: 15px;
+
+    background-color: var(--rouge);
+
+    color: white;
+
+    font-size: 7px;
+
+    text-decoration: none;
+}
+
+.bouton-contour {
+    background-color: white;
+
+    color: var(--rouge);
+
+    border: 1px solid var(--rouge);
+}
+
+
+/* =========================
+   IMAGE PRESENTATION
+========================= */
+
+.presentation-image {
+    padding: 0 0 15px;
+}
+
+.presentation-image img {
+    width: 45%;
+
+    margin-left: 0;
+}
+
+
+/* =========================
+   PRODUITS
+========================= */
+
+.produits {
+    padding: 5px 0 25px;
+}
+
+.produits h2 {
+    margin: 0 0 15px;
+
+    font-family: var(--titre);
+
+    font-size: 25px;
+
+    color: var(--rouge);
+}
+
+
+/* LES 3 CARTES */
+
+.cartes {
+    display: flex;
+
+    gap: 5px;
+}
+
+.carte {
+    width: 33.33%;
+
+    background-color: transparent;
+}
+
+
+/* IMAGE PRODUIT */
+
+.carte img {
+    width: 100%;
+
+    height: 160px;
+
+    object-fit: cover;
+}
+
+
+/* TEXTE PRODUIT */
+
+.carte-texte {
+    padding: 8px 3px;
+}
+
+.carte h3 {
+    margin: 0 0 5px;
+
+    font-family: var(--titre);
+
+    font-size: 13px;
+
+    color: var(--rouge);
+}
+
+.carte p {
+    margin: 0 0 3px;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.pied {
+    padding: 12px 0;
+
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+.pied-colonnes {
+    display: flex;
+
+    gap: 15px;
+}
+
+.pied-colonnes > div {
+    width: 33.33%;
+}
+
+.pied h2 {
+    margin: 0 0 8px;
+
+    font-family: var(--titre);
+
+    font-size: 12px;
+
+    color: var(--rouge);
+}
+
+.pied h3 {
+    margin: 0 0 3px;
+
+    font-family: var(--titre);
+
+    font-size: 10px;
+
+    color: var(--rouge);
+}
+
+.pied p {
+    margin: 0 0 3px;
+
+    font-size: 9px;
+
+    line-height: 1.3;
+}
+
+.pied a {
+    color: var(--rouge);
+}
+
+
+/* =========================
+   GRAND ÉCRAN
+========================= */
+
+@media (min-width: 1024px) {
+
+    .logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding-top: 45px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .carte img {
+        height: 280px;
+    }
+
+    .produits h2 {
+        font-size: 32px;
+    }
+}
+
+.logo2{
+
+    display: flex;
+justify-content: start;
+margin-right: 340px;
+
+
+}
