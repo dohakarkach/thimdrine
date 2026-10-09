@@ -1,257 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thimdrine - Accueil</title>
 
-    <title>Accueil | Thimdrine</title>
+  <!-- Police Lora pour les titres & Source Sans 3 pour le texte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="images/logo.svg">
-
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Source+Sans+3:wght@400;600;700&display=swap">
-
-    <link rel="stylesheet" href="./style.css">
+  <!-- Lien vers le fichier CSS externe -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
+  <!-- En-tête / Header -->
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="images/logo.jpg" alt="Thimdrine" class="logo-img">
+      <span class="logo-text">Thimdrine</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="products.html">Nos produits</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <header class="entete">
+  <main>
+    <!-- Section Hero (Haut de page) -->
+    <section class="hero-section">
+      <div class="hero-container">
+        
+        <!-- Colonne Gauche : Texte & Boutons -->
+        <div class="hero-left">
+          <span class="surtitre">COOPÉRATIVE DE FEMMES · NADOR</span>
+          <h1>Le goût du Rif,<br>récolté à la main<br>par 25 femmes</h1>
 
-        <div class="conteneur entete-contenu">
-
-            <a class="logo" href="index.html">
-             
-                <img src="images/logo.jpg" alt="Thimdrine">
-            
-            </a>
-            
-            <nav class="menu">
-                
-                <div class="logo2">Thimdrine</div>
-                <a class="actif" href="index.html">Accueil</a>
-
-                <a href="produits.html">Nos produits</a>
-
-                <a href="a-propos.html">À propos</a>
-
-                <a href="contact.html">Contact</a>
-
-            </nav>
-
+          <div class="hero-buttons">
+            <a href="products.html" class="btn btn-miel">Découvrir nos produits</a>
+            <a href="contact.html" class="btn btn-outline">Passer commande</a>
+          </div>
         </div>
 
-    </header>
-
-
-    <main>
-
-        <!-- HERO -->
-
-        <section class="hero">
-
-            <div class="conteneur hero-contenu">
-
-                <div class="hero-texte">
-
-                    <p class="surtitre">
-                        Coopérative de femmes - Nador
-                    </p>
-
-                    <h1>
-                        Le goût du Rif,
-                        récolté à la main
-                        par 25 femmes
-                    </h1>
-
-                    <div class="boutons">
-
-                        <a class="bouton" href="produits.html">
-                            Découvrir nos produits
-                        </a>
-
-                        <a class="bouton bouton-contour" href="contact.html">
-                            Passer commande
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="hero-image">
-
-                    <img src="images/hero.svg" alt="Coopérative Thimdrine">
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- IMAGE PRESENTATION -->
-
-        <section class="presentation-image">
-
-            <div class="conteneur">
-
-                <img src="images/presentation.svg"
-                     alt="Femmes de la coopérative Thimdrine">
-
-            </div>
-
-        </section>
-
-
-        <!-- PRODUITS -->
-
-        <section class="produits">
-
-            <div class="conteneur">
-
-                <h2>Nos produits phares</h2>
-
-
-                <div class="cartes">
-
-
-                    <!-- MIEL -->
-
-                    <article class="carte">
-
-                        <img src="images/miel-thym.svg"
-                             alt="Miel de thym">
-
-                        <div class="carte-texte">
-
-                            <h3>Miel de thym</h3>
-
-                            <p>Petit pot : 200 DH</p>
-
-                            <p>Grand pot : 350 DH</p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- HUILE -->
-
-                    <article class="carte">
-
-                        <img src="images/huile-olive.svg"
-                             alt="Huile d'olive">
-
-                        <div class="carte-texte">
-
-                            <h3>Huile d'olive</h3>
-
-                            <p>1 L : 100 DH</p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- CONFITURE -->
-
-                    <article class="carte">
-
-                        <img src="images/confiture-figue.svg"
-                             alt="Confiture de figue">
-
-                        <div class="carte-texte">
-
-                            <h3>Confiture de figue</h3>
-
-                            <p>Petit pot : 150 DH</p>
-
-                            <p>Grand pot : 300 DH</p>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer class="pied">
-
-        <div class="conteneur pied-colonnes">
-
-
-            <div>
-
-                <h2>Coopérative Thimdrine</h2>
-
-                <h3>Adresse</h3>
-
-                <p>
-                    Route de Selouane,<br>
-                    Nador, Maroc
-                </p>
-
-                <p>
-                    Tél : 05 36 00 00 00
-                </p>
-
-                <p>
-                    E-mail :
-                    <a href="mailto:contact@thimdrine.ma">
-                        contact@thimdrine.ma
-                    </a>
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h3>Horaires</h3>
-
-                <p>
-                    Du lundi au samedi
-                </p>
-
-                <p>
-                    de 9 h à 18 h
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h3>Plan du site</h3>
-
-                <p><a href="index.html">Accueil</a></p>
-
-                <p><a href="produits.html">Nos produits</a></p>
-
-                <p><a href="a-propos.html">À propos</a></p>
-
-                <p><a href="contact.html">Contact</a></p>
-
-            </div>
-
-
+        <!-- Colonne Droite : Image principale de la boutique -->
+        <div class="hero-right">
+          <img src="images/page1.jpg" alt="Boutique Thimdrine - Coopérative de femmes à Nador">
         </div>
 
-    </footer>
+      </div>
+    </section>
+
+    <!-- Section Produits Phares -->
+    <section class="produits-phares-section">
+      <h2 class="section-title">NOS PRODUITS PHARES</h2>
+
+      <div class="produits-grid">
+        
+        <!-- Produit 1 -->
+        <div class="produit-card">
+          <div class="image-wrapper">
+            <img src="images/produit3.jpg" alt="Miel de thym naturel">
+          </div>
+          <h3>Miel de thym</h3>
+          <p class="prix">Petit pot : 200 DH<br>Grand pot : 350 DH</p>
+        </div>
+
+        <!-- Produit 2 -->
+        <div class="produit-card">
+          <div class="image-wrapper">
+            <img src="images/produit2.jpg" alt="Huile d'olive pure">
+          </div>
+          <h3>Huile d'olive</h3>
+          <p class="prix">1 L : 100 DH</p>
+        </div>
+
+        <!-- Produit 3 -->
+        <div class="produit-card">
+          <div class="image-wrapper">
+            <img src="images/produit1.jpg" alt="Confiture de figue">
+          </div>
+          <h3>Confiture de figue</h3>
+          <p class="prix">Petit pot : 150 DH<br>Grand pot : 300 DH</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page / Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <!-- Colonne 1 : Adresse & Contacts -->
+      <div class="footer-col">
+        <h3 class="footer-brand">Coopérative Thimdrine</h3>
+        <h4 class="footer-heading">Adresse</h4>
+        <p>Route de Selouane,<br>Nador, Maroc</p>
+        <p class="footer-contact-item">Tél. : 05 36 00 00 00</p>
+        <p class="footer-contact-item">E-mail : contact@thimdrine.ma</p>
+      </div>
+
+      <!-- Colonne 2 : Horaires -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Horaires</h4>
+        <p>Du lundi au samedi<br>de 9 h à 18 h</p>
+      </div>
+
+      <!-- Colonne 3 : Navigation du site -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Plan du site</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="products.html">Nos produits</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
 
 </body>
-
 </html>

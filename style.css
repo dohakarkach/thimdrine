@@ -1,388 +1,399 @@
-/* =========================
-   COULEURS
-========================= */
-
+/* ==========================================
+   CHARTE GRAPHIQUE GLOBAL - THIMDRINE
+   ========================================== */
 :root {
-    --rouge: #800020;
-    --rose: #f8e9e3;
-    --rose-fonce: #f1d8cf;
-    --blanc: white;
+  --couleur-miel: #7B1E36;        /* Bordeaux / Miel */
+  --couleur-figue: #6C1D2F;       /* Bordeaux foncé */
+  --couleur-lin-haut: #FCEBEB;    /* Fond rose pastel clair */
+  --couleur-lin-bas: #FBF6EC;     /* Fond lin/crème */
+  --couleur-bandeau: #EEA0A0;     /* Fond saumon pour les valeurs / formulaires */
+  --couleur-footer: #F3E6D5;      /* Fond du footer */
+  --couleur-terre: #2B2118;       /* Texte sombre */
+  --couleur-blanc: #FFFFFF;
 
-    --titre: "Lora", Georgia, serif;
-    --texte: "Source Sans 3", Arial, sans-serif;
+  --police-titre: 'Lora', Georgia, serif;
+  --police-texte: 'Source Sans 3', Arial, sans-serif;
 }
 
-
-/* =========================
-   BASE
-========================= */
-
+/* Reset de base */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: 0;
-
-    font-family: var(--texte);
-
-    color: var(--rouge);
-
-    background-color: var(--rose);
-
-    /* bandes verticales */
-    background-image: repeating-linear-gradient(
-        90deg,
-        #f8e9e3 0px,
-        #f8e9e3 20px,
-        #f1d8cf 20px,
-        #f1d8cf 40px
-    );
+  font-family: var(--police-texte);
+  background-color: var(--couleur-lin-haut);
+  color: var(--couleur-miel);
+  line-height: 1.5;
+  min-height: 100vh;
 }
 
-img {
-    display: block;
-    max-width: 100%;
+/* ==========================================
+   HEADER / NAVIGATION (COMMUN À TOUTES LES PAGES)
+   ========================================== */
+.navbar, header {
+  background-color: var(--couleur-blanc);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 60px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
-a {
-    color: var(--rouge);
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-
-/* =========================
-   CONTENEUR
-========================= */
-
-.conteneur {
-    width: 100%;
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding-left: 20px;
-    padding-right: 20px;
+.logo-img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
-.entete {
-    background-color: white;
+.logo-text {
+  font-family: var(--police-titre);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--couleur-miel);
 }
 
-.entete-contenu {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-
-    padding-top: 5px;
-    padding-bottom: 5px;
+.nav-links, nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-
-/* LOGO */
-
-.logo img {
-    width: 45px;
-    height: 45px;
-
-    object-fit: contain;
+.nav-links a, nav a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
 }
 
-
-/* MENU */
-
-.menu {
-    display: flex;
-
-    align-items: center;
-
-    gap: 3px;
+.nav-links a.active, nav a.active {
+  background-color: var(--couleur-miel);
+  color: var(--couleur-blanc);
 }
 
-.menu a {
-    padding: 6px 9px;
-
-    font-size: 11px;
-
-    text-decoration: none;
-
-    color: var(--rouge);
-
-    border-radius: 15px;
+/* Titre global de page */
+.page-title {
+  font-family: var(--police-titre);
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--couleur-miel);
+  text-align: center;
+  margin-bottom: 35px;
 }
 
-.menu a.actif {
-    background-color: var(--rouge);
-
-    color: white;
+/* ==========================================
+   PAGE ACCUEIL (INDEX)
+   ========================================== */
+.hero-section {
+  background-color: var(--couleur-lin-haut);
+  padding: 40px 20px 60px;
 }
 
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    padding: 30px 0 15px;
-}
-
-.hero-contenu {
-    display: flex;
-
-    align-items: center;
-
-    gap: 20px;
-}
-
-.hero-texte {
-    width: 40%;
+.hero-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
 }
 
 .surtitre {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: var(--couleur-miel);
+  display: block;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-left h1 {
+  font-family: var(--police-titre);
+  font-size: 44px;
+  line-height: 1.15;
+  color: var(--couleur-miel);
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 25px;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.btn-miel {
+  background-color: var(--couleur-miel);
+  color: var(--couleur-blanc);
+}
+
+.btn-miel:hover {
+  background-color: var(--couleur-figue);
+}
+
+.btn-outline {
+  border: 1.5px solid var(--couleur-miel);
+  color: var(--couleur-miel);
+  background-color: transparent;
+}
+
+.hero-right img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.produits-phares-section {
+  max-width: 1100px;
+  margin: 50px auto 60px;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-family: var(--police-titre);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--couleur-miel);
+  margin-bottom: 35px;
+}
+
+/* ==========================================
+   PAGE À PROPOS (HISTOIRE & VALEURS) - [AJOUTÉ]
+   ========================================== */
+.histoire-section {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.histoire-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.histoire-image {
+  flex: 1;
+  max-width: 420px;
+  display: flex;
+  justify-content: center;
+}
+
+.histoire-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.histoire-content {
+  flex: 1.4;
+}
+
+.histoire-content p {
+  font-size: 22px;
+  line-height: 1.55;
+  color: var(--couleur-miel);
+  margin-bottom: 22px;
+}
+
+.valeurs-section {
+  background-color: var(--couleur-bandeau);
+  padding: 45px 20px 70px;
+  width: 100%;
+  text-align: center;
+}
+
+.valeurs-title {
+  font-family: var(--police-titre);
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--couleur-miel);
+  margin-bottom: 45px;
+}
+
+.valeurs-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: left;
+}
+
+.valeur-card h3 {
+  font-family: var(--police-titre);
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 14px;
+}
+
+.valeur-card p {
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--couleur-miel);
+  font-weight: 500;
+}
+
+/* ==========================================
+   PAGE PRODUITS (CATALOGUE)
+   ========================================== */
+.catalog-section, .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px 70px;
+  text-align: center;
+}
+
+.products-grid, .produits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 30px;
+}
+
+.product-card, .produit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card h2, .produit-card h3, .product-title {
+  font-family: var(--police-titre);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--couleur-miel);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.image-wrapper, .product-image {
+width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 2px;
     margin-bottom: 10px;
-
-    font-size: 8px;
-
-    font-weight: 700;
-
-    text-transform: uppercase;
+    background-color: var(--couleur-lin-haut);
 }
 
-.hero h1 {
-    margin: 0 0 20px;
-
-    font-family: var(--titre);
-
-    font-size: 30px;
-
-    line-height: 1.05;
-
-    color: var(--rouge);
+.image-wrapper img {
+   width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
-
-/* IMAGE HERO */
-
-.hero-image {
-    width: 60%;
+.product-card .price, .produit-card .prix, .product-price {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--couleur-miel);
+  line-height: 1.3;
+  text-align: center;
 }
 
-.hero-image img {
-    width: 100%;
+/* ==========================================
+   FOOTER (COMMUN)
+   ========================================== */
+.footer {
+  background-color: var(--couleur-footer);
+  padding: 45px 20px;
+  border-top: 1px solid rgba(123, 30, 54, 0.1);
 }
 
-
-/* =========================
-   BOUTONS
-========================= */
-
-.boutons {
-    display: flex;
-
-    gap: 8px;
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
 }
 
-.bouton {
-    padding: 7px 10px;
-
-    border-radius: 15px;
-
-    background-color: var(--rouge);
-
-    color: white;
-
-    font-size: 7px;
-
-    text-decoration: none;
+.footer-brand {
+  font-family: var(--police-titre);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--couleur-miel);
+  margin-bottom: 15px;
 }
 
-.bouton-contour {
-    background-color: white;
-
-    color: var(--rouge);
-
-    border: 1px solid var(--rouge);
+.footer-heading {
+  font-family: var(--police-titre);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--couleur-miel);
+  margin-bottom: 8px;
 }
 
-
-/* =========================
-   IMAGE PRESENTATION
-========================= */
-
-.presentation-image {
-    padding: 0 0 15px;
+.footer-col p, .footer-col a {
+  font-size: 15px;
+  color: var(--couleur-miel);
 }
 
-.presentation-image img {
-    width: 45%;
-
-    margin-left: 0;
+.footer-links {
+  list-style: none;
 }
 
-
-/* =========================
-   PRODUITS
-========================= */
-
-.produits {
-    padding: 5px 0 25px;
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
-.produits h2 {
-    margin: 0 0 15px;
-
-    font-family: var(--titre);
-
-    font-size: 25px;
-
-    color: var(--rouge);
-}
-
-
-/* LES 3 CARTES */
-
-.cartes {
-    display: flex;
-
-    gap: 5px;
-}
-
-.carte {
-    width: 33.33%;
-
-    background-color: transparent;
-}
-
-
-/* IMAGE PRODUIT */
-
-.carte img {
-    width: 100%;
-
-    height: 160px;
-
-    object-fit: cover;
-}
-
-
-/* TEXTE PRODUIT */
-
-.carte-texte {
-    padding: 8px 3px;
-}
-
-.carte h3 {
-    margin: 0 0 5px;
-
-    font-family: var(--titre);
-
-    font-size: 13px;
-
-    color: var(--rouge);
-}
-
-.carte p {
-    margin: 0 0 3px;
-
-    font-size: 10px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-.pied {
-    padding: 12px 0;
-
-    background-color: rgba(255, 255, 255, 0.45);
-}
-
-.pied-colonnes {
-    display: flex;
-
+/* ==========================================
+   RESPONSIVE (MOBILES & TABLETTES)
+   ========================================== */
+@media (max-width: 850px) {
+  .navbar, header {
+    flex-direction: column;
     gap: 15px;
+    padding: 15px;
+  }
+
+  .hero-container,
+  .histoire-container {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .products-grid,
+  .produits-grid,
+  .valeurs-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .page-title,
+  .valeurs-title {
+    font-size: 40px;
+  }
 }
 
-.pied-colonnes > div {
-    width: 33.33%;
-}
-
-.pied h2 {
-    margin: 0 0 8px;
-
-    font-family: var(--titre);
-
-    font-size: 12px;
-
-    color: var(--rouge);
-}
-
-.pied h3 {
-    margin: 0 0 3px;
-
-    font-family: var(--titre);
-
-    font-size: 10px;
-
-    color: var(--rouge);
-}
-
-.pied p {
-    margin: 0 0 3px;
-
-    font-size: 9px;
-
-    line-height: 1.3;
-}
-
-.pied a {
-    color: var(--rouge);
-}
-
-
-/* =========================
-   GRAND ÉCRAN
-========================= */
-
-@media (min-width: 1024px) {
-
-    .logo img {
-        width: 55px;
-        height: 55px;
-    }
-
-    .menu a {
-        font-size: 14px;
-    }
-
-    .hero {
-        padding-top: 45px;
-    }
-
-    .hero h1 {
-        font-size: 45px;
-    }
-
-    .carte img {
-        height: 280px;
-    }
-
-    .produits h2 {
-        font-size: 32px;
-    }
-}
-
-.logo2{
-
-    display: flex;
-justify-content: start;
-margin-right: 340px;
-
-
+.footer-text {
+    font-weight: bold;
 }

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -6,28 +5,134 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Thimdrine, coopérative de 25 femmes de Nador : miel de thym, huile d'olive et confiture de figue de barbarie du Rif.">
-  <title>Accueil | Thimdrine</title>
-  <link rel="icon" href="images/logo 1.jpg">
+  <title>Nos produits | Thimdrine</title>
+  <link rel="icon" href="images/logo.jpg">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 
+<body>
 
-    <!-- HEADER -->
-  <body>
-
-  <!-- En-tête : le même sur toutes les pages -->
-  <header class="entete">
-    <div class="conteneur entete-contenu">
-      <a class="logo" href="index.html">
-        <img src="images/logo 1.jpg" alt="">
-        Thimdrine
-      </a>
-      <nav class="menu">
-        <a  href="index.html">Accueil</a>
-        <a class="actif" href="produits.html">Nos produits</a>
-        <a href="a-propos.html">À propos</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+  <!-- En-tête / Header -->
+  <header class="header">
+    <div class="logo-container">
+      <div class="logo-circle">
+        <img src="images/logo.jpg" alt="Thimdrine" class="logo-img">
+      </div>
+      <span class="logo-text">Thimdrine</span>
     </div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="products.html" class="nav-link active">Nos produits</a>
+      <a href="a-propos.html" class="nav-link">À propos</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
   </header>
+
+  <!-- Section Principale / Main Content -->
+  <main class="main-content">
+    <h1 class="page-title">nos produits</h1>
+
+    <div class="products-grid">
+
+      <!-- Produit 1 -->
+      <div class="product-card">
+        <h2 class="product-title">l'huile d'argan</h2>
+        <div class="image-wrapper">
+          <img src="images/huile d'argan.jpg" alt="L'huile d'argan">
+        </div>
+        <p class="product-price">1L=299 DH</p>
+      </div>
+
+      <!-- Produit 2 -->
+      <div class="product-card">
+        <h2 class="product-title">huile de tournesol</h2>
+        <div class="image-wrapper">
+          <img src="images/huile.jpg" alt="Huile de tournesol">
+        </div>
+        <p class="product-price">1L=199 DH</p>
+      </div>
+
+      <!-- Produit 3 -->
+      <div class="product-card">
+        <h2 class="product-title">miel d'orange</h2>
+        <div class="image-wrapper">
+          <img src="images/miel orange.jpg" alt="Miel d'orange">
+        </div>
+        <p class="product-price">
+          petit pot =49 DH<br>
+          grand pot =99 DH
+        </p>
+      </div>
+
+      <!-- Produit 4 -->
+      <div class="product-card">
+        <h2 class="product-title">miel de jujubier</h2>
+        <div class="image-wrapper">
+          <img src="images/miel juj.jpg" alt="Miel de jujubier">
+        </div>
+        <p class="product-price">
+          petit pot=199 DH<br>
+          grand pot=399 DH
+        </p>
+      </div>
+
+      <!-- Produit 5 -->
+      <div class="product-card">
+        <h2 class="product-title">Confiture d'abricot</h2>
+        <div class="image-wrapper">
+          <img src="images/confiture abricot.jpg" alt="Confiture d'abricot">
+        </div>
+        <p class="product-price">
+          petit pot=49DH<br>
+          grand pot=199DH
+        </p>
+      </div>
+
+      <!-- Produit 6 -->
+      <div class="product-card">
+        <h2 class="product-title">confiture de figue</h2>
+        <div class="image-wrapper">
+          <img src="images/confiture.jpg" alt="Confiture de figue">
+        </div>
+        <p class="product-price">
+          petit pot=50DH<br>
+          grand pot=100DH
+        </p>
+      </div>
+
+    </div>
+  </main>
+<footer class="footer">
+    <div class="footer-container">
+      
+      <!-- Colonne 1 : Adresse & Contacts -->
+<div class="footer-col">
+        <h3 class="footer-brand">Coopérative Thimdrine</h3>
+        <h4 class="footer-heading">Adresse</h4>
+        <p>Route de Selouane,<br>Nador, Maroc</p>
+        <p class="footer-contact-item">Tél. : 05 36 00 00 00</p>
+        <p class="footer-contact-item">E-mail : contact@thimdrine.ma</p>
+      </div>
+
+      <!-- Colonne 2 : Horaires -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Horaires</h4>
+        <p>Du lundi au samedi<br>de 9 h à 18 h</p>
+      </div>
+
+      <!-- Colonne 3 : Navigation du site -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Plan du site</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="products.html">Nos produits</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>

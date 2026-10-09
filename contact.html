@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Thimdrine</title>
+
+  <!-- Google Fonts : Lora & Source Sans 3 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Liaison avec la feuille de style globale -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- En-tête / Navigation -->
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="images/logo.jpg" alt="Thimdrine Logo" class="logo-img">
+      <span class="logo-text">Thimdrine</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="products.html">Nos produits</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Section Infos de contact -->
+    <section class="contact-info">
+      <div class="info-group">
+        <span class="label">adresse :</span>
+        <span class="value">Route de Selouane, Nador, Maroc</span>
+      </div>
+
+      <div class="info-group">
+        <span class="label">téléphone :</span>
+        <span class="value">06 00 00 00 00</span>
+      </div>
+
+      <div class="info-group">
+        <span class="label">email :</span>
+        <span class="value">contact@thimdrine.ma</span>
+      </div>
+    </section>
+
+    <!-- Section Formulaire -->
+    <section class="message-section">
+      <h2 class="section-title">envoyez-nous un message</h2>
+
+      <form action="#" method="POST" class="contact-form">
+        <div class="form-grid">
+          
+          <div class="field-container">
+            <label for="nom">nom :</label>
+            <input type="text" id="nom" name="nom" required>
+          </div>
+
+          <div class="field-container">
+            <label for="telephone">numéro de téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required>
+          </div>
+
+          <div class="field-container">
+            <label for="ville">ville :</label>
+            <input type="text" id="ville" name="ville">
+          </div>
+
+          <div class="field-container">
+            <label for="commande">commande :</label>
+            <input type="text" id="commande" name="commande">
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-miel">Envoyer</button>
+
+        <p class="footer-text">
+          Nous sommes passionnés par notre travail et fiers de partager les saveurs authentiques du Rif
+        </p>
+      </form>
+    </section>
+  </main>
+<footer class="footer">
+    <div class="footer-container">
+      
+      <!-- Colonne 1 : Adresse & Contacts -->
+    <div class="footer-col">
+        <h3 class="footer-brand">Coopérative Thimdrine</h3>
+        <h4 class="footer-heading">Adresse</h4>
+        <p>Route de Selouane,<br>Nador, Maroc</p>
+        <p class="footer-contact-item">Tél. : 05 36 00 00 00</p>
+        <p class="footer-contact-item">E-mail : contact@thimdrine.ma</p>
+      </div>
+      <!-- Colonne 2 : Horaires -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Horaires</h4>
+        <p>Du lundi au samedi<br>de 9 h à 18 h</p>
+      </div>
+
+      <!-- Colonne 3 : Navigation du site -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Plan du site</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="products.html">Nos produits</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>
