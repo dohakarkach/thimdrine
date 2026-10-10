@@ -15,7 +15,7 @@
   --police-texte: 'Source Sans 3', Arial, sans-serif;
 }
 
-/* Reset de base */
+/* Reset de base corrigé */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -48,10 +48,21 @@ body {
   gap: 10px;
 }
 
+.logo-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--couleur-blanc);
+}
+
 .logo-img {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .logo-text {
@@ -180,7 +191,7 @@ body {
 }
 
 /* ==========================================
-   PAGE À PROPOS (HISTOIRE & VALEURS) - [AJOUTÉ]
+   PAGE À PROPOS (HISTOIRE & VALEURS)
    ========================================== */
 .histoire-section {
   max-width: 1150px;
@@ -200,12 +211,15 @@ body {
   max-width: 420px;
   display: flex;
   justify-content: center;
+
 }
 
 .histoire-image img {
   width: 100%;
   height: auto;
   object-fit: contain;
+  
+
 }
 
 .histoire-content {
@@ -290,19 +304,19 @@ body {
 }
 
 .image-wrapper, .product-image {
-width: 100%;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 2px;
-    margin-bottom: 10px;
-    background-color: var(--couleur-lin-haut);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  background-color: var(--couleur-lin-haut);
 }
 
 .image-wrapper img {
-   width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .product-card .price, .produit-card .prix, .product-price {
@@ -311,6 +325,105 @@ width: 100%;
   color: var(--couleur-miel);
   line-height: 1.3;
   text-align: center;
+}
+
+/* ==========================================
+   PAGE CONTACT
+   ========================================== */
+.contact-info-section {
+  max-width: 900px;
+  margin: 40px auto 20px;
+  padding: 0 20px;
+}
+
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-line {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--couleur-miel);
+}
+
+.info-label {
+  display: inline-block;
+  width: 140px;
+  text-transform: lowercase;
+}
+
+.contact-form-section {
+  max-width: 900px;
+  margin: 30px auto 60px;
+  padding: 0 20px;
+}
+
+.page-title-left {
+  font-family: var(--police-titre);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--couleur-miel);
+  margin-bottom: 30px;
+  text-transform: lowercase;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 650px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.form-group label {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--couleur-miel);
+  width: 240px;
+  text-align: right;
+  text-transform: lowercase;
+}
+
+.form-group input {
+  flex: 1;
+  height: 42px;
+  padding: 8px 12px;
+  background-color: var(--couleur-blanc);
+  border: 1px solid rgba(123, 30, 54, 0.3);
+  border-radius: 4px;
+  font-family: var(--police-texte);
+  font-size: 16px;
+  color: var(--couleur-terre);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--couleur-miel);
+  box-shadow: 0 0 0 2px rgba(123, 30, 54, 0.15);
+}
+
+.form-submit {
+  margin-left: 255px;
+  margin-top: 10px;
+  text-decoration:#F3E6D5;
+ 
+  
+}
+
+.form-footer-note {
+  margin-left: 255px;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--couleur-miel);
+  margin-top: 15px;
 }
 
 /* ==========================================
@@ -349,6 +462,7 @@ width: 100%;
 .footer-col p, .footer-col a {
   font-size: 15px;
   color: var(--couleur-miel);
+  text-decoration: none;
 }
 
 .footer-links {
@@ -357,6 +471,10 @@ width: 100%;
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+
+.footer-text {
+  font-weight: bold;
 }
 
 /* ==========================================
@@ -394,6 +512,21 @@ width: 100%;
   }
 }
 
-.footer-text {
-    font-weight: bold;
+@media (max-width: 768px) {
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .form-group label {
+    width: 100%;
+    text-align: left;
+  }
+  .form-submit,
+  .form-footer-note {
+    margin-left: 0;
+  }
+  .page-title-left {
+    font-size: 34px;
+  }
 }
