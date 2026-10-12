@@ -16,7 +16,7 @@
 }
 
 
-*, *::before, *::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -41,7 +41,7 @@ body {
   padding: 12px 60px;
 }
 
-.logo-container {
+.logo-thimd {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -99,10 +99,121 @@ body {
   margin-bottom: 35px;
 }
 
+
 /* ==========================================
    PAGE ACCUEIL (INDEX)
    ========================================== */
+/* Section globale en 2 colonnes (Grille ou Flexbox) */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 60px 40px;
+  background-color: var(--couleur-fond, #fdf4f2); /* Couleur de fond rose poudré/crème */
+}
 
+/* Partie Texte à gauche */
+.hero-coo-gou {
+  flex: 1;
+  max-width: 550px;
+}
+
+.hero-subtitle {
+  display: block;
+  font-family: var(--police-texte);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #722f37; /* Couleur bordeaux foncé */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: var(--police-titre); /* Police Lora */
+  font-size: 42px;
+  font-weight: 700;
+  color: #800020; 
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+/* Boutons */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-family: var(--police-texte);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #6a1b29; /* Bordeaux */
+  color: #ffffff;
+  border: 2px solid #6a1b29;
+}
+
+.btn-primary:hover {
+  background-color: #50131e;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #3b1418;
+  border: 2px solid #a3948c; /* Contour couleur lin/gris chaud */
+}
+
+.btn-secondary:hover {
+  background-color: rgba(163, 148, 140, 0.1);
+}
+
+/* Partie Image à droite */
+.hero-image-coo-gou {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Adaptation Mobile (Responsive) --- */
+@media (max-width: 850px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: left;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-image-container {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
 .produits-phares-section {
   max-width: 1100px;
   margin: 50px auto 60px;
@@ -128,7 +239,7 @@ body {
 }
 
 
-.product-card {
+.product-ph {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -136,7 +247,7 @@ body {
 }
 
 
-.image-wrapper {
+.image1 {
   width: 100%;
   aspect-ratio: 3 / 4; 
   overflow: hidden;
@@ -146,14 +257,14 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.image-wrapper img {
+.image-ph1 {
   width: 100%;
   height: 100%;
   object-fit: cover; 
   display: block;
 }
 
-.product-title {
+.product-title-ph {
   font-family: var(--police-titre);
   font-size: 24px;
   font-weight: 700;
@@ -161,7 +272,7 @@ body {
   margin-bottom: 8px;
 }
 
-.product-price {
+.product-price-ind {
   font-size: 18px;
   font-weight: 600;
   color: var(--couleur-miel);
@@ -171,13 +282,13 @@ body {
 /* ==========================================
    PAGE À PROPOS (HISTOIRE & VALEURS)
    ========================================== */
-.histoire-section {
+.histoire-title-img {
   max-width: 1150px;
   margin: 0 auto;
   padding: 40px 20px 60px;
 }
 
-.histoire-container {
+.histoire-img{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -208,7 +319,7 @@ body {
   margin-bottom: 22px;
 }
 
-.valeurs-section {
+.valeurs-123 {
   background-color: var(--couleur-bandeau);
   padding: 45px 20px 70px;
   width: 100%;
@@ -250,7 +361,7 @@ body {
 /* ==========================================
    PAGE PRODUITS (CATALOGUE - 3 en haut, 3 en bas)
    ========================================== */
-.main-content {
+.prod-tous{
   max-width: 1100px;
   margin: 0 auto;
   padding: 30px 20px 70px;
@@ -263,7 +374,7 @@ body {
   gap: 40px 30px;
 }
 
-.product-card {
+.products {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -465,7 +576,7 @@ body {
     padding: 15px;
   }
 
-  .soutit-tit-butt-img,
+  .hero-section,
   .histoire-container {
     grid-template-columns: 1fr;
     flex-direction: column;
