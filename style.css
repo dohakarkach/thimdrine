@@ -2,21 +2,21 @@
    CHARTE GRAPHIQUE GLOBAL - THIMDRINE
    ========================================== */
 :root {
-  --couleur-miel: #7B1E36;        /* Bordeaux / Miel */
-  --couleur-figue: #6C1D2F;       /* Bordeaux foncé */
-  --couleur-lin-haut: #FCEBEB;    /* Fond rose pastel clair */
-  --couleur-lin-bas: #FBF6EC;     /* Fond lin/crème */
-  --couleur-bandeau: #EEA0A0;     /* Fond saumon pour les valeurs / formulaires */
-  --couleur-footer: #F3E6D5;      /* Fond du footer */
-  --couleur-terre: #2B2118;       /* Texte sombre */
+  --couleur-miel: #7B1E36;      
+  --couleur-figue: #6C1D2F;      
+  --couleur-lin-haut: #FCEBEB;    
+  --couleur-lin-bas: #FBF6EC;     
+  --couleur-bandeau: #EEA0A0;    
+  --couleur-footer: #F3E6D5;      
+  --couleur-terre: #2B2118;      
   --couleur-blanc: #FFFFFF;
 
   --police-titre: 'Lora', Georgia, serif;
   --police-texte: 'Source Sans 3', Arial, sans-serif;
 }
 
-/* Reset de base corrigé */
-* {
+
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -39,7 +39,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px 60px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo-container {
@@ -83,9 +82,6 @@ body {
   color: #333333;
   font-size: 14px;
   font-weight: 600;
-  padding: 6px 16px;
-  border-radius: 20px;
-  transition: all 0.2s ease;
 }
 
 .nav-links a.active, nav a.active {
@@ -106,75 +102,6 @@ body {
 /* ==========================================
    PAGE ACCUEIL (INDEX)
    ========================================== */
-.hero-section {
-  background-color: var(--couleur-lin-haut);
-  padding: 40px 20px 60px;
-}
-
-.hero-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.surtitre {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  color: var(--couleur-miel);
-  display: block;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-.hero-left h1 {
-  font-family: var(--police-titre);
-  font-size: 44px;
-  line-height: 1.15;
-  color: var(--couleur-miel);
-  margin-bottom: 30px;
-  font-weight: 700;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.btn {
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 10px 22px;
-  border-radius: 25px;
-  display: inline-block;
-  transition: all 0.2s ease;
-}
-
-.btn-miel {
-  background-color: var(--couleur-miel);
-  color: var(--couleur-blanc);
-}
-
-.btn-miel:hover {
-  background-color: var(--couleur-figue);
-}
-
-.btn-outline {
-  border: 1.5px solid var(--couleur-miel);
-  color: var(--couleur-miel);
-  background-color: transparent;
-}
-
-.hero-right img {
-  width: 100%;
-  border-radius: 4px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
 
 .produits-phares-section {
   max-width: 1100px;
@@ -182,12 +109,63 @@ body {
   padding: 0 20px;
 }
 
-.section-title {
+
+.produits-phares-section .section-title {
   font-family: var(--police-titre);
   font-size: 32px;
   font-weight: 700;
   color: var(--couleur-miel);
+  text-transform: uppercase;
   margin-bottom: 35px;
+  text-align: left;
+}
+
+
+.produits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; 
+}
+
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+
+.image-wrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4; 
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 18px;
+  background-color: var(--couleur-blanc);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+.product-title {
+  font-family: var(--police-titre);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--couleur-miel);
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--couleur-miel);
+  line-height: 1.4;
 }
 
 /* ==========================================
@@ -211,15 +189,12 @@ body {
   max-width: 420px;
   display: flex;
   justify-content: center;
-
 }
 
 .histoire-image img {
   width: 100%;
   height: auto;
   object-fit: contain;
-  
-
 }
 
 .histoire-content {
@@ -273,28 +248,29 @@ body {
 }
 
 /* ==========================================
-   PAGE PRODUITS (CATALOGUE)
+   PAGE PRODUITS (CATALOGUE - 3 en haut, 3 en bas)
    ========================================== */
-.catalog-section, .container {
+.main-content {
   max-width: 1100px;
   margin: 0 auto;
   padding: 30px 20px 70px;
   text-align: center;
 }
 
-.products-grid, .produits-grid {
+.products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px 30px;
 }
 
-.product-card, .produit-card {
+.product-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-.product-card h2, .produit-card h3, .product-title {
+.product-title {
   font-family: var(--police-titre);
   font-size: 24px;
   font-weight: 700;
@@ -303,23 +279,24 @@ body {
   text-align: center;
 }
 
-.image-wrapper, .product-image {
+.image-wrapper {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1; 
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 4px;
   margin-bottom: 10px;
-  background-color: var(--couleur-lin-haut);
+  background-color: var(--couleur-blanc);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .image-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover; 
   display: block;
 }
 
-.product-card .price, .produit-card .prix, .product-price {
+.product-price {
   font-size: 20px;
   font-weight: 600;
   color: var(--couleur-miel);
@@ -413,9 +390,6 @@ body {
 .form-submit {
   margin-left: 255px;
   margin-top: 10px;
-  text-decoration:#F3E6D5;
- 
-  
 }
 
 .form-footer-note {
@@ -429,17 +403,17 @@ body {
 /* ==========================================
    FOOTER (COMMUN)
    ========================================== */
-.footer {
-  background-color: var(--couleur-footer);
+.footer-tous {
+  background-color: var(--couleur-footer); /* #F3E6D5 - Fond crème */
   padding: 45px 20px;
   border-top: 1px solid rgba(123, 30, 54, 0.1);
 }
 
-.footer-container {
+.footer-grid {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr; 
   gap: 40px;
 }
 
@@ -457,24 +431,28 @@ body {
   font-weight: 700;
   color: var(--couleur-miel);
   margin-bottom: 8px;
+  margin-top: 15px;
 }
 
-.footer-col p, .footer-col a {
-  font-size: 15px;
+
+.footer-col a {
   color: var(--couleur-miel);
   text-decoration: none;
 }
 
-.footer-links {
-  list-style: none;
-}
 
-.footer-links a:hover {
+.footer-col a:hover {
   text-decoration: underline;
 }
 
-.footer-text {
-  font-weight: bold;
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
 }
 
 /* ==========================================
@@ -487,7 +465,7 @@ body {
     padding: 15px;
   }
 
-  .hero-container,
+  .soutit-tit-butt-img,
   .histoire-container {
     grid-template-columns: 1fr;
     flex-direction: column;
@@ -495,13 +473,12 @@ body {
   }
 
   .products-grid,
-  .produits-grid,
   .valeurs-grid {
     grid-template-columns: 1fr;
     gap: 35px;
   }
 
-  .footer-container {
+  .footer-grid {
     grid-template-columns: 1fr;
     gap: 25px;
   }
