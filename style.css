@@ -11,6 +11,7 @@
   --couleur-terre: #2B2118;      
   --couleur-blanc: #FFFFFF;
 
+
   --police-titre: 'Lora', Georgia, serif;
   --police-texte: 'Source Sans 3', Arial, sans-serif;
 }
@@ -100,10 +101,7 @@ body {
 }
 
 
-/* ==========================================
-   PAGE ACCUEIL (INDEX)
-   ========================================== */
-/* Section globale en 2 colonnes (Grille ou Flexbox) */
+
 .hero-section {
   display: flex;
   align-items: center;
@@ -140,42 +138,13 @@ body {
 }
 
 /* Boutons */
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-family: var(--police-texte);
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background-color: #6a1b29; /* Bordeaux */
-  color: #ffffff;
-  border: 2px solid #6a1b29;
-}
-
-.btn-primary:hover {
-  background-color: #50131e;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: #3b1418;
-  border: 2px solid #a3948c; /* Contour couleur lin/gris chaud */
-}
-
-.btn-secondary:hover {
-  background-color: rgba(163, 148, 140, 0.1);
+.btn-envoyer{
+  background-color: #800020;
+  border-radius: 15PX;
+ font-size:large;
+ padding: 10px;
+color: #FBF6EC;
+text-decoration: none;
 }
 
 /* Partie Image à droite */
@@ -192,28 +161,7 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* --- Adaptation Mobile (Responsive) --- */
-@media (max-width: 850px) {
-  .hero-section {
-    flex-direction: column;
-    padding: 30px 20px;
-    text-align: left;
-  }
-  
-  .hero-content {
-    max-width: 100%;
-  }
 
-  .hero-title {
-    font-size: 32px;
-  }
-
-  .hero-image-container {
-    width: 100%;
-    justify-content: center;
-    margin-top: 20px;
-  }
-}
 .produits-phares-section {
   max-width: 1100px;
   margin: 50px auto 60px;
@@ -247,20 +195,18 @@ body {
 }
 
 
-.image1 {
+.image-ph1 {
   width: 100%;
-  aspect-ratio: 3 / 4; 
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: 4px;
   margin-bottom: 18px;
-  background-color: var(--couleur-blanc);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.image-ph1 {
+.image-ph1 img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   display: block;
 }
 
@@ -279,9 +225,7 @@ body {
   line-height: 1.4;
 }
 
-/* ==========================================
-   PAGE À PROPOS (HISTOIRE & VALEURS)
-   ========================================== */
+
 .histoire-title-img {
   max-width: 1150px;
   margin: 0 auto;
@@ -358,9 +302,7 @@ body {
   font-weight: 500;
 }
 
-/* ==========================================
-   PAGE PRODUITS (CATALOGUE - 3 en haut, 3 en bas)
-   ========================================== */
+
 .prod-tous{
   max-width: 1100px;
   margin: 0 auto;
@@ -390,23 +332,20 @@ body {
   text-align: center;
 }
 
-.image-wrapper {
+.image6 {
   width: 100%;
-  aspect-ratio: 1 / 1; 
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 4px;
   margin-bottom: 10px;
-  background-color: var(--couleur-blanc);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.image-wrapper img {
+.image6 img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   display: block;
 }
-
 .product-price {
   font-size: 20px;
   font-weight: 600;
@@ -415,10 +354,8 @@ body {
   text-align: center;
 }
 
-/* ==========================================
-   PAGE CONTACT
-   ========================================== */
-.contact-info-section {
+
+.contact-info-tous-section {
   max-width: 900px;
   margin: 40px auto 20px;
   padding: 0 20px;
@@ -511,9 +448,7 @@ body {
   margin-top: 15px;
 }
 
-/* ==========================================
-   FOOTER (COMMUN)
-   ========================================== */
+
 .footer-tous {
   background-color: var(--couleur-footer); /* #F3E6D5 - Fond crème */
   padding: 45px 20px;
@@ -566,55 +501,92 @@ body {
   margin-bottom: 8px;
 }
 
-/* ==========================================
-   RESPONSIVE (MOBILES & TABLETTES)
-   ========================================== */
+/* mobile */
+
 @media (max-width: 850px) {
-  .navbar, header {
+
+  /* Header commun à toutes les pages */
+  .navbar {
     flex-direction: column;
     gap: 15px;
     padding: 15px;
   }
 
-  .hero-section,
-  .histoire-container {
-    grid-template-columns: 1fr;
-    flex-direction: column;
-    text-align: center;
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
   }
 
-  .products-grid,
-  .valeurs-grid {
+  /* Accueil : sec principale */
+  .hero-section {
+   
+    flex-direction: column;
+    text-align: left;
+    padding: 30px 20px;
+  }
+
+  .hero-coo-gou {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-image-coo-gou {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Accueil : produits ph */
+  .produits-grid {
     grid-template-columns: 1fr;
     gap: 35px;
   }
 
-  .footer-grid {
+  /* Page Nos produits */
+  .products-grid {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 35px;
+  }
+
+  /* Page À propos */
+  .histoire-img {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .histoire-image {
+    width: 100%;
+  }
+
+  .histoire-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Page À propos  */
+  .valeurs-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
   }
 
   .page-title,
   .valeurs-title {
     font-size: 40px;
   }
-}
 
-@media (max-width: 768px) {
-  .form-group {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
+  /* Footer commun  toutes les pages */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
-  .form-group label {
-    width: 100%;
-    text-align: left;
-  }
-  .form-submit,
-  .form-footer-note {
-    margin-left: 0;
-  }
-  .page-title-left {
-    font-size: 34px;
-  }
+
 }
